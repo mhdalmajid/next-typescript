@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  font-family: Barlow, sans-serif;
+  font-weight: 400;
+}
+
+.bg-flank-home {
+  background: linear-gradient(113.97deg, #7304ff 30.44%, rgba(255, 255, 255, 0.17) 69.5%),
+    linear-gradient(180deg, #2afd2e 22.64%, #7304ff 76.56%);
+}
+
+.bg-flank-about {
+  background: linear-gradient(1turn, hsla(0, 0%, 100%, 0) 40.67%, hsla(0, 0%, 100%, 0.2) 61.59%),
+    linear-gradient(170.66deg, rgba(42, 253, 46, 0.45) 24.51%, rgba(42, 253, 46, 0.155) 55.06%),
+    #fbff4a;
+}
+
+.bg-flank-presentation {
+  background: linear-gradient(
+      346.29deg,
+      rgba(254, 0, 101, 0.2) 11.66%,
+      hsla(0, 0%, 100%, 0.112) 37.63%,
+      hsla(0, 0%, 100%, 0.106) 95.28%
+    ),
+    linear-gradient(
+      11.28deg,
+      rgba(115, 4, 255, 0.5) 23.66%,
+      rgba(101, 37, 225, 0.5) 51.04%,
+      rgba(115, 4, 255, 0.5) 72.07%
+    ),
+    #7304ff;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0, 40%);
+}
+
+/* For almost full width borders on select options */
+.option:not(:first-child) {
+  position: relative;
+}
+
+.option:not(:first-child):after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 2.5%;
+  height: 1px;
+  width: 95%;
+  border-top: 1px solid #7304ff;
+}

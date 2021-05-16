@@ -1,0 +1,81 @@
+{
+  "eslint.validate": ["typescript", "javascript", "javascriptreact", "typescriptreact", "html"],
+  "files.eol": "\n",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+  "eslint.alwaysShowStatus": true,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "npm.packageManager": "yarn",
+  "eslint.packageManager": "yarn",
+  "stylelint.packageManager": "yarn",
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "tailwindCSS.colorDecorators": "on",
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "javascriptreact": "html",
+    "typescriptreact": "html",
+    "plaintext": "html"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw=\"([^\"]*)", // <div tw="..." />
+    "tw={\"([^\"}]*)", // <div tw={"..."} />
+    "tw\\.\\w+`([^`]*)", // tw.xxx`...`
+    "tw\\(.*?\\)`([^`]*)", // tw(Component)`...`
+    ["classNames\\(([^)]*)\\)", "'([^']*)'", "\"([^']*)\""],
+    ":(?:.|\n)*?[\"'`]([^\"'`]*).*?,",
+    ":\\s*?[\"'`]([^\"'`]*).*?,",
+    "baseStyle.=.[\"'`]([^\"'`]*)"
+  ],
+  "css.validate": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "stylelint.enable": true,
+  "files.exclude": {
+    ".gitattributes": true,
+    ".vscode": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "LICENSE": true,
+    "LICENSE.txt": true,
+    "node_modules": true,
+    "package-lock.json": true,
+    "yarn.lock": true,
+    "postcss.config.js": true,
+    "stylelint.config.js": true,
+    ".prettierrc": true,
+    ".gitignore": true,
+    ".next": true,
+    ".github": true
+    // ".env.local": true,
+    // ".env.local.example": true,
+    // ".eslintrc": true,
+    // ".storybook": true
+  },
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
+}

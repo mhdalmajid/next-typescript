@@ -1,0 +1,108 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "no-use-before-define": "off",
+    "no-plusplus": "off",
+    "no-console": "off",
+    "no-shadow": "off",
+    "no-unused-vars": "off",
+    "semi": ["error", "never"],
+    // indent: [2, 'tab'],
+    "no-trailing-spaces": "error",
+    "no-irregular-whitespace": "error",
+    "no-param-reassign": "off",
+    "comma-dangle": ["off", "always-multiline"],
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 0, "maxBOF": 0 }],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreStrings": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        "devDependencies": [
+          "*.config.js",
+          ".storybook/**",
+          "**/**/*.stories.*",
+          "stories/**",
+          "**/**/*.test.*",
+          "jest-setup.ts",
+          "*.test.*"
+        ]
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/prefer-default-export": 0,
+    // "react/button-has-type": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }], //should add ".ts" if typescript project
+    "react/no-unescaped-entities": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "tabWidth": 2,
+        "semi": false,
+        "trailingComma": "es5",
+        "singleQuote": true
+        // "printWidth": 140
+      }
+    ]
+  },
+  "ignorePatterns": ["/node_module/", ".next"]
+}
